@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Notes</title>
+
+    <!-- font Awesme -->
+    <script
+      src="https://kit.fontawesome.com/efcd399e0b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Jersey+25&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* // <uniquifier>: Use a unique and descriptive class name
+      // <weight>: Use a value from 400 to 900 */
+
+      .playfair-display {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Playfair Display";
+      }
+
+      .container {
+        display: flex;
+      }
+      .left,
+      .right {
+        width: 50vw;
+        height: 100vh;
+      }
+      .left {
+        background-color: rgba(207, 207, 255, 0.422);
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        gap: 1rem;
+        padding: 5%;
+      }
+      .textarea {
+        width: 80%;
+        box-shadow: 2px 2px 5px 1px rgba(140, 10, 10, 0.849);
+        border-radius: 5px;
+        border: none;
+        padding: 10px;
+      }
+
+      .left button {
+        border: none;
+        border-radius: 2rem;
+        width: 120px;
+        height: 50px;
+        background-image: linear-gradient(
+          to right,
+          pink,
+          rgba(255, 10, 10, 0.85)
+        );
+        color: white;
+        font-weight: bold;
+      }
+
+      .right {
+        padding: 1rem;
+      }
+      .right h1 {
+        text-align: center;
+        background-color: rgba(248, 89, 116, 0.712);
+        border-radius: 4px;
+        color: white;
+        padding: 10px;
+      }
+      .notes {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .note {
+        font-weight: bold;
+        background-color: #ffc0cb;
+        color: white;
+        max-width: 200px;
+        padding: 20px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: all-scroll;
+      }
+      .dragging {
+        opacity: 0.5;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="left">
+        <textarea
+          required
+          placeholder="Write your notes here"
+          class="textarea"
+          cols="30"
+          rows="10"
+        ></textarea>
+
+        <form action="">
+          <input type="color" name="" id="" value="#ffc0cb" />
+        </form>
+
+        <button>Add Notes</button>
+      </div>
+      <div class="right">
+        <h1>Your Notes</h1>
+        <div class="notes"><b>No Data Yet</b></div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
